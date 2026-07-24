@@ -5,6 +5,7 @@
     eza
     fd
     go
+    helm
     k9s
     kubectl
     nerdctl
