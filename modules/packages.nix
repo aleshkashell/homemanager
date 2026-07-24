@@ -5,7 +5,7 @@
     eza
     fd
     go
-    helm
+    kubernetes-helm
     k9s
     kubectl
     nerdctl
