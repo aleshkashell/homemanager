@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     chezmoi
+    cilium-cli
     eza
     fd
     go
