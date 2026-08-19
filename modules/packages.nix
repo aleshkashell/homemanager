@@ -6,6 +6,7 @@
     eza
     fd
     go
+    go-task
     kubernetes-helm
     k9s
     kubectl
