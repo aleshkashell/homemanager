@@ -9,6 +9,7 @@
     k9s
     kubectl
     nerdctl
+    talosctl
     telegram-desktop
     zoxide
   ];
