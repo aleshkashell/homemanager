@@ -1,12 +1,14 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    bat
     chezmoi
     cilium-cli
     claude-code
     eza
     fd
     fluxcd
+    freelens-bin
     go
     go-task
     kubernetes-helm
