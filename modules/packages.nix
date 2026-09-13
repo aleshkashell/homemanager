@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    awscli2
     bat
     chezmoi
     cilium-cli
@@ -15,7 +16,9 @@
     k9s
     kubectl
     nerdctl
+    openclaw
     opencode
+    qbittorrent-cli
     talosctl
     telegram-desktop
     zoxide

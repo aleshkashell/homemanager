@@ -8,6 +8,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "openclaw-2026.6.11"
+    "openclaw-2026.6.33"
   ];
   nixpkgs.config.allowUnfree = true;
   # This value determines the Home Manager release that your configuration is
@@ -22,9 +23,10 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    pkgs.hello
+    pkgs.sops
+    pkgs.age
+    pkgs.kustomize
+    pkgs.pulumi
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
