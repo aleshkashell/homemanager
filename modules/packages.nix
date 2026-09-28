@@ -18,7 +18,9 @@
     nerdctl
     openclaw
     opencode
+    pnpm
     qbittorrent-cli
+    rustup
     talosctl
     telegram-desktop
     zoxide
