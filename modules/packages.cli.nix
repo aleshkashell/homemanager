@@ -7,6 +7,7 @@
     chezmoi
     eza
     fd
+    gitlab-ci-ls
     go-task
     nerdctl
     pulumi
