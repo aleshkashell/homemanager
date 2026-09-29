@@ -4,7 +4,13 @@
 
   # Adjust identity for this profile if needed.
   programs.git.settings.user = {
-    name = "aleksei.sheludchenkov";
+    name = "Sheludchenkov Aleksei";
     email = "asheludchenkov@usergate.com";
+  };
+  programs.git.settings.init = {
+    defaultBranch = "dev";
+  };
+  programs.git.settings.push = {
+    autoSetupRemote = true;
   };
 }
