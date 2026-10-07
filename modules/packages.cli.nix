@@ -7,6 +7,7 @@
     chezmoi
     eza
     fd
+    fyi
     gitlab-ci-ls
     go-task
     nerdctl
