@@ -16,6 +16,7 @@
     nerdctl
     pulumi
     qbittorrent-cli
+    ugrep
     zoxide
   ];
 }
