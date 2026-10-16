@@ -34,6 +34,24 @@ make update PROFILE=asheludchenkov
 make asheludchenkov
 ```
 
+## Per-profile packages
+
+All modules receive the profile name as the `name` argument (see
+`extraSpecialArgs` in `flake.nix`). To install a package only for some
+profiles, gate it with `lib.optionals` in the module:
+
+```nix
+{ pkgs, lib, name, ... }:
+{
+  home.packages =
+    (with pkgs; [ thunar telegram-desktop ])
+    ++ lib.optionals (name == "aleshka") [ amnezia-vpn-wrapped ];
+}
+```
+
+A profile can also add extra packages for itself by defining `home.packages`
+in `profiles/<profile>.nix` — package lists from all modules are concatenated.
+
 ## Add a new profile
 
 1. Create `profiles/<profile>.nix` with at least `home.username` and

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, name, ... }:
 let
   # nixpkgs-сборка amnezia-vpn на nix-on-Fedora: в её closure есть libglvnd,
   # но нет mesa с EGL vendor-config (на NixOS его даёт /run/opengl-driver) →
@@ -17,9 +17,13 @@ let
   };
 in
 {
-  home.packages = with pkgs; [
-    amnezia-vpn-wrapped
-    thunar
-    telegram-desktop
-  ];
+  # `name` — имя профиля из flake.nix (extraSpecialArgs). Чтобы пакет ставился
+  # только в одни профили, добавляй его через lib.optionals (name == "..."),
+  # см. README «Per-profile packages».
+  home.packages =
+    (with pkgs; [
+      thunar
+      telegram-desktop
+    ])
+    ++ lib.optionals (name == "aleshka") [ amnezia-vpn-wrapped ];
 }
