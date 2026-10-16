@@ -1,5 +1,6 @@
 {
   imports = [
+    ./direnv.nix
     ./git.nix
     ./noctalia.nix
     ./packages.ai.nix
