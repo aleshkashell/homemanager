@@ -12,6 +12,7 @@
     fyi
     gitlab-ci-ls
     go-task
+    lsd
     nerdctl
     pulumi
     qbittorrent-cli
