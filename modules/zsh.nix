@@ -57,6 +57,15 @@
     # После подключения autosuggestions (order 700 в HM).
     initContent = ''
       bindkey '^ ' autosuggest-accept
+
+      # Drop-in файлы, как в bash (~/.bashrc.d). Пока что там только strata.sh
+      # с актуальным ключом локального Strata-сервера (STRATA_API_KEY).
+      if [ -d ~/.zshrc.d ]; then
+        for rc in ~/.zshrc.d/*(.N); do
+          source "$rc"
+        done
+        unset rc
+      fi
     '';
   };
 }

@@ -14,8 +14,10 @@
     go-task
     lsd
     nerdctl
+    nmap
     pulumi
     qbittorrent-cli
+    s5cmd
     ugrep
     zoxide
   ];

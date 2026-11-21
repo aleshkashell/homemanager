@@ -1,5 +1,6 @@
 {
   imports = [
+    ./agents.nix
     ./bash.nix
     ./direnv.nix
     ./fish.nix
